@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD .//EM"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="connection.url">jdbc:mysql://localhost/r24af</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+
+		<mapping class="br.com.each.modelo.atividadefisica.AtividadeFisica" />
+		<mapping class="br.com.each.modelo.atividade.Atividade" />
+		<mapping class="br.com.each.modelo.atividade.Categoria" />
+		<mapping class="br.com.each.modelo.paciente.Paciente" />
+		<mapping class="br.com.each.modelo.paciente.Pessoa" />
+		<mapping class="br.com.each.modelo.user.User" />
+
+	</session-factory>
+</hibernate-configuration>
